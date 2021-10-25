@@ -14,31 +14,22 @@
 
 // Comment out the following line if this is for the mission planner rather than the rover
 //#define ROVER 1
-/*
- * needed for second serial port on ttgo t-display in rover
- * 
- * Serial2.begin(9600, SERIAL_8N1, 25, 26);
- * 
- * 
- */
+ 
  
 #ifdef ROVER
-#define SerialPort Serial2  // later change to serial1 hardware serial
+#define SerialPort Serial2   
 #else
 #define SerialPort Serial
 #endif
 
-// mission planner mac  3C:61:05:0D:73:48 
-// mission planner usa:C4:4F:33:7F:F6:19
-// rover mac - rover    3C:61:05:0C:C4:14
-//  rover mac USA:     AC:67:B2:2A:D7:5C
+ 
 
 //------------------------------------------------------------
 #ifdef ROVER
-//uint8_t RxMACaddress[] = {0x3C, 0x61, 0x05, 0x0D, 0x73, 0x48};
+//uint8_t RxMACaddress[] = {0x3C, 0x61, 0x05, 0x0D, 0x73, 0x48};  // Spain robot
 uint8_t RxMACaddress[] = {0xC4, 0x4F, 0x33, 0x7F, 0xF6, 0x19};
 #else
-//uint8_t RxMACaddress[] = {0x3C, 0x61, 0x05, 0x0C, 0xC4, 0x14};
+//uint8_t RxMACaddress[] = {0x3C, 0x61, 0x05, 0x0C, 0xC4, 0x14};  // Spain robot
 uint8_t RxMACaddress[] = {0xAC, 0x67, 0xB2, 0x2A, 0xD7, 0x5C};
 #endif
 //------------------------------------------------------------

@@ -21,11 +21,11 @@ Set the baud rate for both the Pixhawk and the Mission Planner to 115,200 (Not 5
 This means you should edit the parameters as follows from mission planner while your flight controller is directly connected to your Windows PC using a direct usb connection:
 
     
-
+`
 SERIAL1_BAUD	115
 SERIAL1_OPTIONS	  0	 
 SERIAL1_PROTOCOL  2	
-    
+`    
 
 I set serial1 protocol to 2, for Mavlink 2, because I heard that was more efficient but it also worked ok with Mavlink 1 Protocol.
 

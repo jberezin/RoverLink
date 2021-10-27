@@ -1,4 +1,4 @@
- //Transceiver 1 Sketch:
+bb //Transceiver 1 Sketch:
 //--------------------------------------------
 //ESP32 Tranceiver 1 via ESP-NOW Protocol
 // 
@@ -77,7 +77,7 @@ void setup()
   WiFi.mode(WIFI_STA);
 
 #ifdef DEBUGGING
-  Serial.print("ESP32 Board MAC Address:  ");
+  Serial.print("ESP32 Board MAC Address:  ");  // you can set debugging to see your mac address if unknown but don´t leave debugging on
   Serial.println(WiFi.macAddress());
 #endif
   

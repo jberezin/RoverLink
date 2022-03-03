@@ -15,6 +15,8 @@ Connect the base station board to a Windows PC running Mission Planner using its
 
 Connect the other board to a Pixhawk compatible flight controller.  I only used three wires: Transmit, Receive, and Ground.  I powered the ESP32 in the rover with a separate power source to not draw too much power from the Pixhawk.
 
+UPDATE: I now also use power pin am powering my esp32 from the pixhawk and am powering my pixhawk through the servo rail from a 36V battery and buck converter (5v) with zener diode for protection.
+
 
 Set the baud rate for both the Pixhawk and the Mission Planner to 115,200 (Not 57,600),
 
@@ -70,6 +72,10 @@ Enhancements:
 
 I want to put in better error reporting, utilize the OLED display on the TTGO T-display to output mac addresses and other status information, and improve the documentation but do not have a timeframe for this.  I am open to having others contribute to this project.
 
+
+Note:
+
+Yuri-Rage: Another Ardurover user, Yuri-Rage has created a similar application to mine that uses buffering and also support RTCM3 (for using GPS correction networks without having to startup Mission Planner.)  He said that he built a similar app to this one and experienced packet loss when using it on a very large plot of land.  I have not experienced any problems myself but am not using as large of an area for my rover.   If you have any problems or just want to try his code instead, please check out his github at https://github.com/yuri-rage/ESP-Now-Burst-Serial-Bridge.  This code is very simple and does not use any buffering and does not have any hardcoded delays.
 
 
 
